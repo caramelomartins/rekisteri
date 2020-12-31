@@ -14,7 +14,7 @@ Check the `providers` folder for examples of structure and hierarchy of the file
 ## Running
 
 ```
-FLASK_ENV=development FLASK_APP=main.py flask run
+$ FLASK_ENV=development FLASK_APP=main.py flask run
 ```
 
 ## Backends
