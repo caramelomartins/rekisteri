@@ -1,6 +1,5 @@
 import json
-from flask import Flask
-from flask import abort
+from flask import Flask, abort
 from os import path
 
 app = Flask(__name__)
@@ -47,8 +46,10 @@ def package(namespace, name, version, os, arch):
         if elem["version"] == version:
             for platform in elem["platforms"]:
                 if platform["os"] == os and platform["arch"]:
-                    app.logger.debug(platform)
                     provider = platform
                     provider["protocols"] = elem["protocols"]
+    
+    if provider is None:
+        abort(404)
 
     return provider

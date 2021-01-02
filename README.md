@@ -1,6 +1,6 @@
-# terraform-registry
+# rekisteri
 
-A private Terraform Registry that serves Terraform's [Provider Registry Protocol](https://www.terraform.io/docs/internals/provider-registry-protocol.html).
+`rekisteri` is a private Terraform Registry that serves Terraform's [Provider Registry Protocol](https://www.terraform.io/docs/internals/provider-registry-protocol.html).
 
 For now, only a local filesystem backend is provided, which means only information from the metadata in those files is available, and there's only 3 endpoints - which comply with Terraform's protocol.
 
